@@ -1,0 +1,72 @@
+
+.ContenedorDeMenu{
+    background-color: #252424;
+    width: 100%;
+}
+
+.Buscador{}   
+
+
+.NombrePagina{
+    margin-top: 15px;
+    display: inline-block;
+    font-family: "Games" , sans-serif;
+    transform: translateX(-210px);
+}
+
+.InputBuscador{
+    width: 400px;
+    height: 35px;
+    margin-left: 100px;
+    padding-left: 10px;
+    background-color: #313131;
+    border: 0px;
+    border-radius: 10px;
+    transform: translateX(-160px);
+    /* border-radius: 5px; */
+}
+
+.BotonBuscador{
+    width: 80px;
+    height: 35px;
+    color:  white;
+    border-radius: 10px;
+    border:0px;
+    background: #0d6efd;
+    Margin-left: 5px;
+    transform: translateX(-160px);
+    transition: all 0.5s;
+}
+
+.BotonBuscador:hover{
+    box-shadow: 0 0 10px #0d6efd
+}
+
+.ContenedorDeLista{}
+
+.Lista{
+    margin: 0%;
+    padding: 0%;
+    display: inline-block;
+    list-style-type: none;
+    margin-bottom: 5px !important;
+}
+
+.opciones{
+    display: inline-block;
+    font-size: 13px;
+    padding: 0%;
+    margin: 0%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.LinkMenu{
+    text-decoration: none;
+    color: white;
+}
+
+.LinkMenu:hover{
+    color: #0d6efd;
+}
+
