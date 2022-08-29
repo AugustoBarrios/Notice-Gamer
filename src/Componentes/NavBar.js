@@ -1,7 +1,8 @@
 import "./NavBar.css";
+import CartWidget from "./CartWidget";
 
 
-function Menu() {
+function NavBar() {
     return (
         <div className="ContenedorDeMenu">
             <div className="Buscador">
@@ -20,10 +21,11 @@ function Menu() {
                         <li className="opciones"><a className="LinkMenu" href="#">Registrarse</a></li>
                         <li className="opciones" ><a className="LinkMenu" href="#">Acceder a tu cuenta</a></li>
                     </ul>
+                    <CartWidget />
                 </nav>
             </div>
         </div>
     );
 }
 
-export default Menu;
+export default NavBar;
