@@ -1,5 +1,5 @@
 import "./CartWidget.css";
-import User from "../asetss/person-circle.svg"
+import User from './person-circle.svg'
 
 function CartWidget() {
     return (

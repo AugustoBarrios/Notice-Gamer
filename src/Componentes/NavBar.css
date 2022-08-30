@@ -1,28 +1,24 @@
+*{
+    padding: 0%;
+    margin: 0;
+}
 
 .ContenedorDeMenu{
     background-color: #252424;
     width: 100%;
-}
-
-/* .Buscador{} */   
-
-
-.NombrePagina{
-    margin-top: 15px;
-    display: inline-block;
-    font-family: "Games" , sans-serif;
-    transform: translateX(-190px);
+    height: auto;
 }
 
 .InputBuscador{
-    width: 400px;
+    width: 500px;
     height: 35px;
-    margin-left: 200px;
-    padding-left: 10px;
+    margin-top: 15px;
+    margin-left: 340px;
+    padding-left: 15px;
     color: white;
     background-color: #313131;
     border: 0px;
-    border-radius: 10px;
+    border-radius: 20px;
     transform: translateX(-160px);
     /* border-radius: 5px; */
 }
@@ -31,7 +27,7 @@
     width: 80px;
     height: 35px;
     color:  white;
-    border-radius: 10px;
+    border-radius: 20px;
     border:0px;
     background: #0d6efd;
     Margin-left: 5px;
@@ -40,36 +36,29 @@
 }
 
 .BotonBuscador:hover{
-    box-shadow: 0 0 10px #0d6efd
+    box-shadow: 0 0 5px #0d6efd
 }
 
-/* .ContenedorDeLista{} */
+.ContenedorDeLinks{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
 
 .Lista{
-    margin: 0%;
-    padding: 0%;
-    display: inline-block;
-    list-style-type: none;
-    margin-bottom: 5px !important;
-}
-
-.opciones{
-    background-color: black;
-    width: auto;
-    display: inline-block;
-    font-size: 13px;
-    margin-left: 15px;
-    margin-right: 15px;
-
-}
-
+    margin-bottom: 15px;
+    list-style: none;
+    margin-left: 20px;}    
 
 .LinkMenu{
     text-decoration: none;
+    padding: 6px 15px;
     color: white;
+    border-radius: 20px;
 }
 
 .LinkMenu:hover{
-    color: #0d6efd;
-}
+    background-color: white;
+    color: #0d6efd;}
+
 
