@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './Componentes/NavBar';
 import ItemListContainer from './Componentes/ItemListContainer/ItemListContainer';
+import Contador from "./Componentes/itemCount/itemCount"
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <ItemListContainer>
          <h2>Saludos Usuario!</h2>
         </ItemListContainer>
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <Contador/>
         {/* <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
