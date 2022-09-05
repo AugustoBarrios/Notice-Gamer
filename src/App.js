@@ -1,17 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import NavBar from './Componentes/NavBar';
+import NavBar from './Componentes/NavBar/NavBar';
 import ItemListContainer from './Componentes/ItemListContainer/ItemListContainer';
-import Contador from "./Componentes/itemCount/itemCount"
+import Contador from "./Componentes/itemCount/ItemCount"
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      {/* <NavBar /> */}
       <header className="App-header">
-      <ItemListContainer>
-         <h2>Saludos Usuario!</h2>
-        </ItemListContainer>
+      <ItemListContainer greeting="Saludos Usuario!"/>
+      <br/>
+      <br/>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <Contador/>
         {/* <p>
