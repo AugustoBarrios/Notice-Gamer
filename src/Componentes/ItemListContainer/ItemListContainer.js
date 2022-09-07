@@ -4,7 +4,8 @@ import data from "./mock-data";
 import { useState, useEffect } from 'react';
 import ItemList from "../itemList/itemList";
 
-function ItemListContainer({ greeting }) {
+
+function ItemListContainer({ greeting, children }) {
 
     const [item, setItem] = useState([]);
 
@@ -22,10 +23,13 @@ function ItemListContainer({ greeting }) {
     }, [])
     return (
         <>
+            <div>{children}</div>
             <div>{greeting}</div>
             <br/>
             <br/>
-            <ItemList itemList= {item} />
+            {item.length > 0 ? (<ItemList itemList= {item} />
+            ) : (<div>Cargando...</div>)}
+            
         </>
     )
 }

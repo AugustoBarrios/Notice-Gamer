@@ -1,0 +1,39 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.ContenedorDetail{
+    border-radius: 5px;
+    display: flex;
+    width: 650px;
+    height: auto;
+    background-color: #313131;
+}
+
+.contenedorDetail__imagenDescripcion{
+    margin:0px 10px 10px 10px;
+}
+
+.imagenDetail{
+    width: 400px;
+    height: 400px;
+}
+
+.descripcionDetail{
+    font-size: 18px;
+    text-align: justify;
+}
+
+.contenedorDetail__nombrePrecio{
+    text-align: start;
+    width: 890px !important;
+}
+
+.nombreDetail{
+    margin-left: 10px;
+}
+
+.precioDetail{
+    margin-left: 10px;
+}

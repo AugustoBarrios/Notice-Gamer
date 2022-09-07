@@ -3,13 +3,16 @@ import './App.css';
 import NavBar from './Componentes/NavBar/NavBar';
 import ItemListContainer from './Componentes/ItemListContainer/ItemListContainer';
 import Contador from "./Componentes/itemCount/ItemCount"
+import ItemDetailContainer from './Componentes/itemDetaiContainer/itemDetailContainer';
 
 function App() {
   return (
     <div className="App">
-      {/* <NavBar /> */}
+      <NavBar />
       <header className="App-header">
-      <ItemListContainer greeting="Saludos Usuario!"/>
+      <ItemListContainer greeting="Saludos Usuario!">
+      <ItemDetailContainer/>
+      </ItemListContainer>
       <br/>
       <br/>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}

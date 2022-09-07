@@ -11,6 +11,7 @@ function ItemList({itemList}) {
                 Descripcion= {producto.Descripcion}
                 Precio= {producto.Precio}
                 Imagen= {producto.Imagen}
+                Stock= {producto.Stock}
                 />
                 );
             })}
