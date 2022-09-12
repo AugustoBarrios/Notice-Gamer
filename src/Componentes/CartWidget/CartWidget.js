@@ -1,9 +1,13 @@
 import "./CartWidget.css";
-import User from './person-circle.svg'
+import Cart from './cart.svg'
+import Arrow from './caret-down-fill.svg'
 
 function CartWidget() {
     return (
-        <img className="ImagenBuscador" src={User} alt=""></img>
+        <button className="contenedorCarritoImagen"> 
+        <img className="ImagenBuscador" src={Cart} alt=""></img>
+        <img className="ImagenBuscador" src={Arrow} alt=""></img>
+        </button>
     )
 }
 

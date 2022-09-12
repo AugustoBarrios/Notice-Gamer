@@ -4,5 +4,8 @@
 }
 
 .divContenedor{
+    justify-content: center;
+    width: 850px;
     display: flex;
+    flex-wrap: wrap;
 }

@@ -4,32 +4,27 @@ import NavBar from './Componentes/NavBar/NavBar';
 import ItemListContainer from './Componentes/ItemListContainer/ItemListContainer';
 import Contador from "./Componentes/itemCount/ItemCount"
 import ItemDetailContainer from './Componentes/itemDetaiContainer/itemDetailContainer';
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
       <NavBar />
       <header className="App-header">
-      <ItemListContainer greeting="Saludos Usuario!">
-      <ItemDetailContainer/>
-      </ItemListContainer>
+      <Routes>
+        <Route path='/' element={<ItemListContainer greeting="Saludos Usuario!"/>}/> 
+        <Route path='/category/:Id' element={<ItemListContainer/>}/>
+        <Route path="/item/:Id" element={<ItemDetailContainer/>}/>
+      </Routes>
+      {/* <ItemDetailContainer/>
+      <ItemListContainer greeting="Saludos Usuario!"/> */}
       <br/>
       <br/>
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <Contador/>
-        {/* <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
       </header>
     </div>
+    </BrowserRouter>
   );
 }
 

@@ -2,24 +2,26 @@ import React from 'react';
 import data from "../ItemListContainer/mock-data";
 import { useState, useEffect } from 'react';
 import ItemDetaill from "../itemDetail/itemDetail"
+import {useParams} from "react-router-dom"
 
 
 function ItemDetailContainer() {
+    const {Id} = useParams();
     const [ItemDetail, setItemDetail] = useState({});
 
-    const getItem = ()=>{
+    const getItem = (id)=>{
         return new Promise((resolve, reject) => {
             setTimeout(()=>{
-                resolve(data[0])
+                const DetalleProducto = data.find(producto=> producto.Id ===parseFloat(id))
+                resolve(DetalleProducto);
             }, 2000)
         })
     }
 
     useEffect(() => {
         const getProducto = async () => {
-            const producto = await getItem();
-            console.log(' producto ', producto)
-            setItemDetail(producto);
+            const Detalle = await getItem(Id);
+            setItemDetail(Detalle);
         }
         getProducto();
     }, [])
@@ -33,11 +35,4 @@ function ItemDetailContainer() {
 
 export default ItemDetailContainer;
 
-/* useEffect (() => {
-    const getProducto = async ( ) = > {
-   }
-        const producto = await getItem ( ) ;
-        console.log ( ' producto ' , producto )
-        setItem ( producto ) ;
-    getProducto ( ) ;
-} , [ ] ) */
+

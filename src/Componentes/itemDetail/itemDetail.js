@@ -10,7 +10,11 @@ function ItemDetail({ Detalle }) {
             </div>
             <div className="contenedorDetail__nombrePrecio">
                 <h5 className="nombreDetail">{Detalle.Nombre}</h5>
-                <h6 className="precioDetail">{Detalle.Precio}</h6>
+                <h6 className="precioDetail">${Detalle.Precio}</h6>
+                <button className="botonDeCompra">Comprar</button>
+                {/* <div className="contenedorBoton">
+                    <button className="Boton">Comprar</button>
+                </div> */}
             </div>
         </div>
     )
@@ -18,13 +22,3 @@ function ItemDetail({ Detalle }) {
 
 export default ItemDetail;
 
-/* return(
-        
-     <div>
-         <h4>{Nombre}</h4>
-         <h5>{Descripcion}</h5>
-         <h6>{Precio}</h6>
-         <img src={Imagen}/>
-     </div>) */
-
-/* Detalle.find(Destalle => Detalle.Id == 1) */

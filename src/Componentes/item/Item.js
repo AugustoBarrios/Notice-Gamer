@@ -1,4 +1,5 @@
 import "./Item.css"
+import {Link} from "react-router-dom"
 
 
 function Item({ Id, Nombre, Descripcion, Precio, Imagen, Stock}) {
@@ -10,7 +11,7 @@ function Item({ Id, Nombre, Descripcion, Precio, Imagen, Stock}) {
             <p className="Titulo"><strong>{Nombre}</strong></p>
             <p className="Precio" >{Precio}</p>
             <p className="Descripcion" >{Descripcion}</p>
-            <button className="Boton">Add</button>
+            <Link to={`/item/` + Id} ><button className="Boton">Detalles</button></Link>
             <p className="Stock">En Stock: {Stock}</p>
             </div>
         </div>
@@ -18,3 +19,4 @@ function Item({ Id, Nombre, Descripcion, Precio, Imagen, Stock}) {
 };
 
 export default Item;
+

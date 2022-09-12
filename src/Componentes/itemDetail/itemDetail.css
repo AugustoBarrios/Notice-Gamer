@@ -4,36 +4,57 @@
 }
 
 .ContenedorDetail{
-    border-radius: 5px;
+    margin-left: 70px;
     display: flex;
-    width: 650px;
-    height: auto;
-    background-color: #313131;
+    width: auto;
 }
 
 .contenedorDetail__imagenDescripcion{
-    margin:0px 10px 10px 10px;
+    width: 900px;
+    margin: 20px;
 }
 
 .imagenDetail{
-    width: 400px;
-    height: 400px;
+    width: 800px;
+    border-radius: 10px;
 }
 
 .descripcionDetail{
-    font-size: 18px;
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 800px;
+    font-size: 20px;
     text-align: justify;
 }
 
 .contenedorDetail__nombrePrecio{
     text-align: start;
-    width: 890px !important;
+    margin: 20px;
+    width: 300px;
 }
 
 .nombreDetail{
-    margin-left: 10px;
+    font-size: 30px;
 }
 
 .precioDetail{
-    margin-left: 10px;
+    font-size: 25px;
 }
+
+.contenedorBoton{
+    width: 100px;
+}
+
+.botonDeCompra{
+    background-color: #0d6efd;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    margin-top: 350px;
+    width: 270px;
+    height: 30px;
+}
+
+/* .contenedorBoton{
+    text-align: end;
+} */
