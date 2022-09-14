@@ -21,7 +21,6 @@ function App() {
       <ItemListContainer greeting="Saludos Usuario!"/> */}
       <br/>
       <br/>
-        <Contador/>
       </header>
     </div>
     </BrowserRouter>

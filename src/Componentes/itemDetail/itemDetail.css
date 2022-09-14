@@ -34,15 +34,21 @@
 }
 
 .nombreDetail{
+    margin-left: 15px ;
     font-size: 30px;
 }
 
 .precioDetail{
+    margin-left: 15px ;
     font-size: 25px;
 }
 
 .contenedorBoton{
     width: 100px;
+}
+
+.info{
+    margin: 30px 15px;
 }
 
 .botonDeCompra{
@@ -51,7 +57,7 @@
     color: white;
     border: none;
     margin-top: 350px;
-    width: 270px;
+    width: 100%;
     height: 30px;
 }
 
