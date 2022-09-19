@@ -11,10 +11,10 @@ function ItemDetailContainer() {
 
     const getItem = (id)=>{
         return new Promise((resolve, reject) => {
-            setTimeout(()=>{
+            
                 const DetalleProducto = data.find(producto=> producto.Id ===parseFloat(id))
                 resolve(DetalleProducto);
-            }, 2000)
+            
         })
     }
 

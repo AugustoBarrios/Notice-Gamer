@@ -1,13 +1,16 @@
 import "../itemDetail/itemDetail.css";
 import Count from "../itemCount/ItemCount"
-import { useState } from "react"
+import { useState, useContext } from "react"
+import {cartContext} from "../../cartContext/cartContext";
 
 
 function ItemDetail({ Detalle }) {
-
+    const {addItem} = useContext(cartContext);
     const [contador, setContador] = useState(0);
+    
     function agregarCarrito(dato) {
         setContador(dato);
+        addItem(Detalle, dato)
     }
 
     return (

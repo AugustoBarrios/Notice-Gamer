@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.m{
+  margin-left: 35px;
+  margin-right: 35px;  
+}
+
+.tipos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container{
+
+}
+
+.card{
+    text-align: center;
+    justify-content: center;
+    border: 2px white solid;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.imagen{
+    width: 200px;
+    border-radius: 5px;
+}
+
+.centrar{
+    margin-top: 3%;
+}
+
+.remover{
+    width: 50px;
+    border-radius: 10px;
+    border: red solid;
+    background-color: red;
+}
+
+.clear{
+    color: white;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px red solid;
+    background-color: red;
+    transition: all 0.5s;
+}
+
+.clear:hover{
+    background-color: transparent;
+}
