@@ -15,6 +15,7 @@ function ItemDetail({ Detalle }) {
 
     return (
         <div className="ContenedorDetail">
+            {/* <div>{Detalle.Id}</div> */}
             <div className="contenedorDetail__imagenDescripcion">
                 <img className="imagenDetail" src={Detalle.Imagen} alt={Detalle.Nombre} />
                 <p className="descripcionDetail">{Detalle.Descripcion}</p>
