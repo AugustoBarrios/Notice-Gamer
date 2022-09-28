@@ -41,17 +41,18 @@
 }
 
 .clear{
-    color: white;
+    color: red;
     width: 200px;
     height: 30px;
     border-radius: 5px;
     border: 2px red solid;
-    background-color: red;
+    background-color: transparent;
     transition: all 0.5s;
 }
 
 .clear:hover{
-    background-color: transparent;
+    background-color: red;
+    color: white;
 }
 
 .linkInicioCart{
@@ -68,4 +69,52 @@
     color: #0d6efd;
     border: 3px white solid;
     background-color: white;
+}
+
+.contenedorFormulario{
+    height: 450px;
+    width: 600px;
+    background-color: #252424;
+    padding: 50px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 300px;
+    border-radius: 9px; 
+    box-shadow: 0 0 15px black;  
+    
+}
+
+.formulario{
+    width: 500px;
+    height: 50px;
+    background-color: #313131;
+    padding-left: 10px;
+    border-radius: 25px;
+    border-color: transparent;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.formularioBoton{
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    border: 2px #0d6efd solid;
+    background: transparent;
+    color:#0d6efd;
+    font-size: 20px;
+    transition: all 1s;
+}
+
+.formularioBoton:hover{
+    background-color: #0d6efd;
+    color: white;
+}
+
+.tituloComentario{
+    margin: 15px;
+}
+
+.comentario{
+    font-size: 18px;
 }

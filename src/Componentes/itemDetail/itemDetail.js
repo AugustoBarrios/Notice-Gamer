@@ -1,13 +1,13 @@
 import "../itemDetail/itemDetail.css";
 import Count from "../itemCount/ItemCount"
 import { useState, useContext } from "react"
-import {cartContext} from "../../cartContext/cartContext";
+import { cartContext } from "../../cartContext/cartContext";
 
 
 function ItemDetail({ Detalle }) {
-    const {addItem} = useContext(cartContext);
+    const { addItem } = useContext(cartContext);
     const [contador, setContador] = useState(0);
-    
+
     function agregarCarrito(dato) {
         setContador(dato);
         addItem(Detalle, dato)
@@ -25,8 +25,7 @@ function ItemDetail({ Detalle }) {
                 <h6 className="precioDetail">${Detalle.Precio}</h6>
                 <div className="info">Cantidad: {" " + contador}</div>
                 <div className="info">Total: ${contador * Detalle.Precio}</div>
-                <button className="botonDeCompra">Comprar</button>
-                <Count stock={Detalle.Stock} agregarAlCarrito={agregarCarrito} />
+                <div className="contenedorCount"><Count stock={Detalle.Stock} agregarAlCarrito={agregarCarrito} /></div>
             </div>
         </div>
     )
