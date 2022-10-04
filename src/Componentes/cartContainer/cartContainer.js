@@ -33,12 +33,24 @@ function CartContainer() {
                     Cart Container
                     {productCartList.map(item => (
                         <div className="card">
-                            <img className="imagen m" src={item.Imagen} />
-                            <p className="nombre m centrar">{item.Nombre}</p>
-                            <p className="cantidad m centrar">{item.quantity}</p>
-                            <p className="precio m centrar">Pu: {item.Precio}</p>
-                            <p className="precio m centrar">Pu: {item.quantityPrecio}</p>
-                            <button className="remover m" onClick={() => removeItem(item.Id)}><img src={trash} /></button>
+                            <div className="contenedorImagen__card centrar">
+                                <img className="imagen m" src={item.Imagen} />
+                            </div>
+                            <div className="contenedorNombre__card centrar">
+                                <p className="nombre m">{item.Nombre}</p>
+                            </div>
+                            <div className="contenedorCantidad__card centrar">
+                                <p className="cantidad m">{item.quantity}</p>
+                            </div>
+                            <div className="contenedorPrecioUnitario__card centrar">
+                                <p className="precioUnitario m">Precio Unitario: {item.Precio}</p>
+                            </div>
+                            <div className="contenedorPrecioTotal__card centrar">
+                                <p className="precio m">Total: {item.quantityPrecio}</p>
+                            </div>
+                            <div className="contenedorButton__card centrar">
+                                <button className="remover m" onClick={() => removeItem(item.Id)}><img src={trash} /></button>
+                            </div>
                         </div>
                     ))}
                     <h4>Total a pagar: {" "} {getTotal()}</h4>
@@ -50,9 +62,9 @@ function CartContainer() {
                             <input className="formulario" type="email" placeholder="Email" />
                             <input className="formularioBoton" type="submit" placeholder="Enviar order" />
                             <h3 className="tituloComentario">Aviso!</h3>
-                            <p className="comentario">Asegurate de tener los productos necesarios en tu carrito , y valida que los datos esten bien agregados , 
-                            ya que no se podra modificar la orden luego de ser enviada. Para cancelar una orden deberas comunicarte por telefono 
-                            con la empresa para poder hacerlo , asegurate de tener el numero de identificacion de tu pedido.</p>
+                            <p className="comentario">Asegurate de tener los productos necesarios en tu carrito , y valida que los datos esten bien agregados ,
+                                ya que no se podra modificar la orden luego de ser enviada. Para cancelar una orden deberas comunicarte por telefono
+                                con la empresa para poder hacerlo , asegurate de tener el numero de identificacion de tu pedido.</p>
                         </form>
                     </div>
                 </div>

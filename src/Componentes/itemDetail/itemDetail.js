@@ -11,6 +11,18 @@ function ItemDetail({ Detalle }) {
     function agregarCarrito(dato) {
         setContador(dato);
         addItem(Detalle, dato)
+
+        /* function cambiar(event){
+            event.preventDefault()
+            debugger
+            const enlace = document.getElementsByClassName('contenedorCount');
+            const enlace2 = document.getElementsByClassName('count');
+            const creacion = document.createElement('p');
+            const texto = document.createTextNode('hola');
+            creacion.appendChild(texto);
+
+            enlace.replaceChild(creacion, enlace2)
+        } */
     }
 
     return (
@@ -25,7 +37,7 @@ function ItemDetail({ Detalle }) {
                 <h6 className="precioDetail">${Detalle.Precio}</h6>
                 <div className="info">Cantidad: {" " + contador}</div>
                 <div className="info">Total: ${contador * Detalle.Precio}</div>
-                <div className="contenedorCount"><Count stock={Detalle.Stock} agregarAlCarrito={agregarCarrito} /></div>
+                <div className="contenedorCount"><Count className="count" stock={Detalle.Stock} agregarAlCarrito={agregarCarrito} /></div>
             </div>
         </div>
     )
