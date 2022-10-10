@@ -1,3 +1,12 @@
+#Explicacion del estudiante
+
+Para iniciar la app , debera ejecutar en la terminal el comando "npm start". En la carpeta "src", se encuentran todas las carpetas
+de los distintos archivos js y css. Todos estan relacionados directa o indirectamente con el archivo app.js (Es decir
+hay archivos que estan declarados directamente en ese archivo, y otros que estan declarados en otros archivos que fueron declarados
+en el archivo app.js). Podra navegar en los detalles de los productos solo desde el apartado inicio del navbar, y podra agregar los
+productos necesarios desde ahi y visualizarlos en el cart que se muestra al lado de los links del navbar. El carrito cuenta con un
+ formulario a completar por el comprador/usuario.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
