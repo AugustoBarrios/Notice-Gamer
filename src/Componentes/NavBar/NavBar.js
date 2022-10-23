@@ -1,6 +1,6 @@
 import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
-import {Link} from "react-router-dom"
+import {Link, NavLink} from "react-router-dom"
 
 
 function NavBar() {
@@ -12,9 +12,9 @@ function NavBar() {
             <div className="ContenedorDeLista">
                 <nav>
                     <ul className="ContenedorDeLinks">
-                        <li className="Lista"><Link className="LinkMenu" to="/" >Inicio</Link></li>
-                        <li className="Lista"><Link className="LinkMenu" to="/category/Consolas">Consolas</Link></li>
-                        <li className="Lista"><Link className="LinkMenu" to="/category/videojuegos">Videojuegos</Link></li>
+                        <li className="Lista"><NavLink className={({isActive})=>isActive ? "LinkMenuActive" : "LinkMenu"} to="/" >Inicio</NavLink></li>
+                        <li className="Lista"><NavLink className={({isActive})=>isActive ? "LinkMenuActive" : "LinkMenu"} to="/category/Consolas">Consolas</NavLink></li>
+                        <li className="Lista"><NavLink className={({isActive})=>isActive ? "LinkMenuActive" : "LinkMenu"} to="/category/videojuegos">Videojuegos</NavLink></li>
                         <li className="Lista"><a className="LinkMenu" href="#">Noticias</a></li>
                         <li className="Lista"><a className="LinkMenu" href="#">Ayuda</a></li>
                         <li className="Lista"><a className="LinkMenu" href="#">Accede a tu cuenta</a></li>

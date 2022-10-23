@@ -58,6 +58,14 @@
     transition: all 0.5s;
 }
 
+.LinkMenuActive{
+    text-decoration: none;
+    padding: 6px 15px;
+    border-radius: 20px;
+    background-color: white;
+    color: #0d6efd;
+}
+
 .LinkMenu:hover{
     background-color: white;
     color: #0d6efd;}

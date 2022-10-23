@@ -1,5 +1,5 @@
 import "../itemDetail/itemDetail.css";
-import Count from "../itemCount/ItemCount"
+import Contador from "../itemCount/ItemCount"
 import { useState, useContext } from "react"
 import { cartContext } from "../../cartContext/cartContext";
 
@@ -9,8 +9,10 @@ function ItemDetail({ Detalle }) {
     const [contador, setContador] = useState(0);
 
     function agregarCarrito(dato) {
-        setContador(dato);
+        if(dato > 0){
+            setContador(dato);
         addItem(Detalle, dato)
+        }else{}
 
         /* function cambiar(event){
             event.preventDefault()
@@ -37,7 +39,7 @@ function ItemDetail({ Detalle }) {
                 <h6 className="precioDetail">${Detalle.Precio}</h6>
                 <div className="info">Cantidad: {" " + contador}</div>
                 <div className="info">Total: ${contador * Detalle.Precio}</div>
-                <div className="contenedorCount"><Count className="count" stock={Detalle.Stock} agregarAlCarrito={agregarCarrito} /></div>
+                <div className="contenedorCount"><Contador stock={Detalle.Stock} agregarAlCarrito={agregarCarrito} /></div>
             </div>
         </div>
     )

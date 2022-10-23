@@ -10,6 +10,7 @@ import {doc, getDoc} from "firebase/firestore";
 function ItemDetailContainer() {
     const {Id} = useParams();
     const [ItemDetail, setItemDetail] = useState({});
+    const [count, setCount] = useState(0);
 
     /* const getItem = (id)=>{
         return new Promise((resolve, reject) => {
@@ -36,15 +37,21 @@ function ItemDetailContainer() {
                 Id: response.id,
                 ...response.data(),
             }
-            console.log(newItem);
             setItemDetail(newItem);
         }
         getProducto();
     },[Id])
 
+        setTimeout(()=>{
+            let contador = 0;
+            let num = contador + 1
+            setCount(num)
+        }, 3000);
+    
+
     return (
             <div>
-                <ItemDetaill Detalle={ItemDetail} />
+                {count < 1 ? (<div> Cargando...</div>) : (<ItemDetaill Detalle={ItemDetail} />)}
             </div>
     )
 }

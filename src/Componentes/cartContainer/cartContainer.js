@@ -5,12 +5,15 @@ import "../cartContainer/cartContainer.css";
 import { Link } from "react-router-dom";
 import { db } from "../../utils/firebase";
 import { collection, addDoc } from "firebase/firestore";
+import Form from "../form/form";
+
 
 function CartContainer() {
     const { productCartList, removeItem, clear, getTotal } = useContext(cartContext);
 
-    function sendOrder(event) {
+    function sendOrder(event,) {
         event.preventDefault()
+        console.log(event)
         const newOrder = {
             buyer: {
                 name: event.target[0].value,
@@ -22,7 +25,9 @@ function CartContainer() {
             total: getTotal(),
         }
         const ref = collection(db, "orders");
-        addDoc(ref, newOrder).then(response => console.log(response))
+        addDoc(ref, newOrder).then(response => alert("Atencion el id de su compra es: " + "\"" + 
+        response.id + "\"" + " por razones de seguridad solo podra copiarlo esta vez, despues de eso no estara disponible de vuelta"))
+        clear()
     }
 
 
@@ -55,7 +60,8 @@ function CartContainer() {
                     ))}
                     <h4>Total a pagar: {" "} {getTotal()}</h4>
                     <button className="clear" onClick={clear}>Limpiar Carrito</button>
-                    <div>
+                    <Form action={sendOrder} />
+                    {/* <div>
                         <form className="contenedorFormulario" onSubmit={sendOrder}>
                             <input className="formulario" type="text" placeholder="Apellido y Nombre" />
                             <input className="formulario" type="tel" placeholder="Telefono" />
@@ -66,7 +72,7 @@ function CartContainer() {
                                 ya que no se podra modificar la orden luego de ser enviada. Para cancelar una orden deberas comunicarte por telefono
                                 con la empresa para poder hacerlo , asegurate de tener el numero de identificacion de tu pedido.</p>
                         </form>
-                    </div>
+                    </div> */}
                 </div>
 
                     :
